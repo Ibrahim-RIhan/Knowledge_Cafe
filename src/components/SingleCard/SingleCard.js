@@ -13,7 +13,7 @@ const SingleCard = (props) => {
                 <div class="card-body lh-base">
                     <div className='d-flex justify-content-between'>
                         <div className='d-flex align-items-center'>
-                            <img src={user} alt="" />
+                            <img className='rounded-1' src={user} alt="" />
                             <div className='lh-1'>
                                 <h6 className='fw-bold'>{name}</h6>
                                 <p className='text-secondary ms-3'>{date}</p>

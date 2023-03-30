@@ -7,7 +7,7 @@ const Header = () => {
         <div>
             <nav className="navbar bg-light">
                 <div className="container-fluid">
-                   <h1>Knowledge Cafe</h1>
+                   <h1 className='fs-2 fw-bold'>Knowledge Cafe</h1>
                     <img src={user} alt="" />
                 </div>
             </nav>
