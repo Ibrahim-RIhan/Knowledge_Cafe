@@ -11,10 +11,10 @@ function App() {
       <hr />
       <div className='row'>
         <div className='col-md-8'>
-<Card></Card>
+          <Card></Card>
         </div>
         <div className='col-md-4 '>
-<Sidebar></Sidebar>
+          <Sidebar></Sidebar>
         </div>
       </div>
     </div>
