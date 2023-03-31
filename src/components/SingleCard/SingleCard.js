@@ -1,11 +1,10 @@
 import React from 'react';
 import './SingleCard.css'
-import user from '../../images/user-1.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookBookmark, } from '@fortawesome/free-solid-svg-icons'
 
 const SingleCard = (props) => {
-    const { img, name, title, time, date} = props.data;
+    const { img, name, title, time, date, userImg} = props.data;
    const readingTime = props.readingTime
    const handleBookmark =props.handleBookmark;
   
@@ -16,9 +15,9 @@ const SingleCard = (props) => {
                 <div className="card-body lh-base">
                     <div className='d-flex justify-content-between'>
                         <div className='d-flex align-items-center'>
-                            <img className='rounded-1' src={user} alt="" />
+                            <img className='rounded-circle userImg' src={userImg} alt="" />
                             <div className='lh-1'>
-                                <h6 className='fw-bold fs-5'>{name}</h6>
+                                <h6 className='fw-bold ms-3 fs-5'>{name}</h6>
                                 <p className='text-secondary ms-3'>{date}</p>
                             </div>
                         </div>
