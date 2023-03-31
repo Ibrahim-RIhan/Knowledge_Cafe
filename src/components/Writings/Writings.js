@@ -16,7 +16,7 @@ const Writings = () => {
             <div className='card border solid border-danger p-3 my-3  '>
                 <h1 className='fw-bold'>Purpose of useEffect other than fetching data</h1>
                 <hr />
-                <p className='fs-3' >The useEffect in react js allows you to perform side effects in your components. The react useEffect examples of side effects include retrieving data, direct DOM updates, and timers. The second argument is optional.The useEffect hook will make a network request on component render. When that fetch resolves, it will set the response from the server to the local state using the setState function. This, in turn, will cause the component to render so as to update the DOM with the data.</p>
+                <p className='fs-3' >The useEffect in react js allows you to perform side effects in your components. The react useEffect examples of side effects include retrieving data,validating input field, trigger animation on new array value, direct DOM updates, and timers. The second argument is optional.The useEffect hook will make a network request on component render. When that fetch resolves, it will set the response from the server to the local state using the setState function. This, in turn, will cause the component to render so as to update the DOM with the data.</p>
             </div>
             <div className='card border solid border-danger p-3 my-3 '>
                 <h1 className='fw-bold'>How does React work?</h1>
