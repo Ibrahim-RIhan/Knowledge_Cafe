@@ -29,7 +29,7 @@ const SingleCard = (props) => {
                     </div>
                     <div className='text-start my-3'>
                         <h1 className='fs-1 text fw-bold'>{title}</h1>
-                        <p className='text-secondary'>#Hashtag    #hashtag</p>
+                        <p className='text-secondary fs-5'>#programming    #blogs </p>
                         <button type="button" className="btn btn-link markRead" onClick={() =>readingTime(time)}>Mark as read</button>
                     </div>
                 </div>

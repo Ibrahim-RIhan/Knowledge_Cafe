@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Card from './components/Cards/Card';
 import Sidebar from './components/Sidebar/Sidebar';
 import { useState } from 'react';
+import Writings from './components/Writings/Writings';
 
 
 
@@ -66,6 +67,7 @@ function App() {
           ></Sidebar>
         </div>
       </div>
+      <Writings></Writings>
     </div>
   );
 }
