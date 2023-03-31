@@ -1,3 +1,13 @@
 .SingleCard p{
 font-size: 16px !important;
 }
+.markRead{
+    color:  #6047EC ;
+    font-size: larger;
+    font-weight: bold;
+}
+.timeRead{
+    color :gray;
+    text-decoration: none;
+    font-size: 20px;
+}

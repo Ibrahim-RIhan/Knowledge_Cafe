@@ -1,3 +1,19 @@
-.bookmarksBar{
+.sidebar{
+    position: sticky;
+    top: 40px;
+}
+
+
+
+
+.bookmarkContainer{
     background-color: rgba(17, 17, 17, 0.05);
+    
+}
+.spentTime{
+    border : #6047EC;
+    color: #6047EC;
+    font-weight: 800;
+    font-size: 25px;
+    background-color:  rgba(96, 71, 236, 0.1);;
 }

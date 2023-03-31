@@ -9,16 +9,16 @@ import { useState } from 'react';
 
 
 function App() {
-  const [bookmarkN0, setbookmarkN0] = useState(0);
+  const [bookmarked, setBookmarked] = useState(0);
   const [timeSpend, setTimeSpend] = useState(0);
   const [bookmarks, setBookmarks] = useState([])
-  const miniutesRead = (time) => {
+  const readingTime = (time) => {
     setTimeSpend(timeSpend + time)
   }
   const handleBookmark = (title) => {
-    setbookmarkN0(bookmarkN0 + 1);
+    setBookmarked(bookmarked + 1);
     if (bookmarks.includes(title)) {
-      toast.error('Bookmark Already Added', {
+      toast.error('Bookmark Already Added!!!!', {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
@@ -27,10 +27,10 @@ function App() {
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
+      });
     } else {
       setBookmarks([...bookmarks, title]);
-      toast('🦄 Wow so easy!', {
+      toast('Added as Bookmark!!!', {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
@@ -39,7 +39,7 @@ function App() {
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
+      });
     }
 
 
@@ -48,19 +48,20 @@ function App() {
 
   return (
     <div className="App container mx-auto">\
-    <ToastContainer></ToastContainer>
+      <ToastContainer></ToastContainer>
       <Header></Header>
       <hr />
       <div className='row'>
         <div className='col-md-8'>
-          <Card miniutesRead={miniutesRead}
+          <Card
+            readingTime={readingTime}
             handleBookmark={handleBookmark}
           ></Card>
         </div>
         <div className='col-md-4 '>
           <Sidebar
             timeSpend={timeSpend}
-            bookmarkN0={bookmarkN0}
+            bookmarked={bookmarked}
             bookmarks={bookmarks}
           ></Sidebar>
         </div>

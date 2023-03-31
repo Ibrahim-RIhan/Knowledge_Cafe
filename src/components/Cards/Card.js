@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SingleCard from '../SingleCard/SingleCard';
 
-const Card = ({miniutesRead,handleBookmark}) => {
+const Card = ({readingTime,handleBookmark}) => {
     const [card , setCard] = useState([]);
 
     useEffect(()=>{
@@ -13,7 +13,7 @@ fetch('data.json')
 
         <div>
             {
-                card.map(card =><SingleCard key={card.id} data ={card} miniutesRead={miniutesRead }
+                card.map(card =><SingleCard key={card.id} data ={card} readingTime={readingTime }
                     handleBookmark={handleBookmark}
                     ></SingleCard>)
             }
