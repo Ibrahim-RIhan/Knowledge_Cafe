@@ -8,11 +8,17 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
-
+  const [bookmarkN0, setbookmarkN0] = useState(0);
   const [timeSpend, setTimeSpend] = useState(0);
+  const [bookmarks ,setBookmarks] =useState([])
   const miniutesRead = (time) => {
     setTimeSpend(timeSpend + time)
   }
+  const handleBookmark = (title) => {
+    setbookmarkN0(bookmarkN0 + 1);
+    setBookmarks(title)
+
+  };
 
 
   return (
@@ -21,10 +27,16 @@ function App() {
       <hr />
       <div className='row'>
         <div className='col-md-8'>
-          <Card miniutesRead={miniutesRead}></Card>
+          <Card miniutesRead={miniutesRead}
+            handleBookmark={handleBookmark}
+          ></Card>
         </div>
         <div className='col-md-4 '>
-          <Sidebar timeSpend={timeSpend}></Sidebar>
+          <Sidebar
+            timeSpend={timeSpend}
+            bookmarkN0={bookmarkN0}
+            bookmarks = {bookmarks}
+          ></Sidebar>
         </div>
       </div>
     </div>

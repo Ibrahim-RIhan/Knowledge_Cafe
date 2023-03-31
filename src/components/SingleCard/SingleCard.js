@@ -7,6 +7,7 @@ import { faBookBookmark, } from '@fortawesome/free-solid-svg-icons'
 const SingleCard = (props) => {
     const { img, name, title, time, date,  } = props.data;
    const miniutesRead = props.miniutesRead
+   const handleBookmark =props.handleBookmark;
   
     return (
         <div className='SingleCard'>
@@ -22,7 +23,7 @@ const SingleCard = (props) => {
                             </div>
                         </div>
 
-                        <p >{time} min read <FontAwesomeIcon icon={faBookBookmark} /></p>
+                        <p onClick={()=>handleBookmark(title)} >{time} min read <FontAwesomeIcon icon={faBookBookmark} /></p>
 
                     </div>
                     <div className='text-start my-3'>
