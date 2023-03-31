@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Header from './components/Header/Header';
 import Card from './components/Cards/Card';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -16,7 +18,12 @@ function App() {
   }
   const handleBookmark = (title) => {
     setbookmarkN0(bookmarkN0 + 1);
-    setBookmarks(title)
+    if (bookmarks.includes(title)) {
+      alert('already bookmark')
+    } else {
+      setBookmarks([...bookmarks, title]);
+    }
+
 
   };
 
